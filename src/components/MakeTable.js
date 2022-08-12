@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Table, TableContainer, TableBody, TableCell, TableHead, TableRow, Paper, makeStyles, TablePagination } from '@material-ui/core';
+import { Table, TableContainer, TableBody, TableCell, TableHead, TableRow, Paper, makeStyles, TablePagination, Button } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles({
@@ -114,6 +114,9 @@ const MakeTable = () => {
                 onPageChange={handleChangePage}
                 onRowsPerPageChange={handleChangeRowsPerPage}
             />
+            <Button variant="contained" color="primary" onClick={() => navigate('/hierarchy')}>
+                Go to Hierarchy
+            </Button>
         </>
     );
 }
